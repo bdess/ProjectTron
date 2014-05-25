@@ -5,7 +5,7 @@ $content = stream_get_contents($open);
 fclose($open);
 $xml = new SimpleXMLElement ($content);
 
-echo "<table width='500' border='1'>";
+echo "<table width='500' border='1' align='center'>";
 
 foreach ($xml->heroes->hero as $hero) {
     $heronamestring = $hero->name;
@@ -20,5 +20,25 @@ echo "</table>";
 
 ?>
 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Hero List</title>
+        <link href="http://www.dota2.com/public/css/global.css" rel="stylesheet" type="text/css" />
+        <link href="http://www.dota2.com/public/css/heropedia.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            *{color:#ccc;font-size:13px;text-shadow: 1px 1px 1px rgba(0,0,0,0.5);}
+            a{color:#A9CF54 !important;}
+            h1,h2,h3{text-align: center;}
+            h2{font-size:16px;color:#92A525;}
+            p{font-family:Tahoma;}
+            td{font-family:Tahoma;text-align:center;padding:2px 5px;}
+        </style>
+    </head>
+    <body>
+        
+    </body>
+
+</html>
 
 
